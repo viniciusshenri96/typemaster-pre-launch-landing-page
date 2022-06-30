@@ -1,0 +1,189 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;900&display=swap");
+
+/* VARIABLES CSS */
+:root {
+  /* Colors */
+  --color-orange: #f16718;
+  --color-orange-hover: #ff9b62;
+  --color-blue: #162542;
+  --color-blue-text: #7b8bad;
+  --color-grey: #e8eff2;
+  --color-white: #ffffff;
+
+  /* Typographya */
+  --font-h1: 3.5rem;
+  --font-h2: 2rem;
+  --font-h3: 1.5rem;
+  --font-body: 1rem;
+
+  /* Font weight */
+  --fw-medium: 500;
+  --fw-black: 900;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+ul {
+  list-style: none;
+}
+span {
+  font-weight: 700;
+}
+body {
+  background-color: var(--color-white);
+  color: var(--color-blue-text);
+  font-family: sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Typograpya */
+.font-h1 {
+  font: var(--fw-black) var(--font-h1) / 1 "Barlow";
+}
+.font-h2 {
+  font: var(--fw-black) var(--font-h2) / 1.12 "Barlow";
+}
+.font-h3 {
+  font: var(--fw-black) var(--font-h3) / 1.17 "Barlow";
+}
+.font-body {
+  font: var(--fw-medium) var(--font-body) / 1.62 "Barlow";
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 1rem 1.625rem;
+  color: var(--color-white);
+  border-radius: 8px;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 2.5rem;
+}
+
+@media (min-width: 1160px) {
+  .container {
+    margin: 0 auto;
+  }
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 55px 0 83px;
+}
+
+.header__img {
+  border-radius: 0;
+}
+
+.btn-blue {
+  background-color: var(--color-blue-text);
+}
+
+/* MAIN */
+.keyboard__home {
+  display: grid;
+  grid-template-columns: 445px 1fr;
+  gap: 125px;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+.keyboard__home::after {
+  content: "";
+  display: block;
+  width: 255px;
+  height: 240px;
+  background: url(../img/shared/pattern-square.svg) no-repeat;
+  position: absolute;
+  top: 0;
+  right: -285px;
+}
+.keyboard__title {
+  color: var(--color-blue);
+  margin-bottom: 1.5rem;
+}
+.keyboard__desc {
+  font-size: 1.125rem;
+  line-height: 1.44;
+  margin-bottom: 2.5rem;
+}
+.btn-orange {
+  background-color: var(--color-orange);
+  margin-right: 40px;
+}
+
+.keyboard__intro {
+  display: grid;
+  grid-template-columns: 1fr 255px;
+  align-items: center;
+  margin-bottom: 168px;
+  gap: 125px;
+  position: relative;
+}
+.keyboard__intro::after {
+  content: "";
+  display: block;
+  width: 255px;
+  height: 240px;
+  background: url(../img/shared/pattern-square.svg) no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: -280px;
+}
+.keyboard__images {
+  display: flex;
+  gap: 30px;
+  position: relative;
+}
+.keyboard__images::after {
+  content: "";
+  display: block;
+  width: 255px;
+  height: 480px;
+  background: var(--color-orange);
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: multiply;
+  border-radius: 20px;
+}
+.keyboard__phone,
+.keyboard__glass {
+  height: 480px;
+}
+.keyboard__phone {
+  width: 255px;
+}
+.keyboard__title-bottom {
+  margin-bottom: 27px;
+}
+
+@media (max-width: 1200px);
