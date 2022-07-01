@@ -29,10 +29,12 @@
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   display: block;
   border-radius: 20px;
+  object-fit: cover;
+  object-position: left;
 }
 
 a:link,
@@ -101,6 +103,7 @@ body {
 
 .header__img {
   border-radius: 0;
+  width: auto;
 }
 
 .btn-blue {
@@ -110,13 +113,14 @@ body {
 /* MAIN */
 .keyboard__home {
   display: grid;
-  grid-template-columns: 445px 1fr;
+  /* grid-template-columns: 1.6fr 2fr; */
+  grid-template-columns: 5fr 7fr;
   gap: 125px;
   align-items: center;
   position: relative;
   margin-bottom: 30px;
 }
-.keyboard__home::after {
+/* .keyboard__home::after {
   content: "";
   display: block;
   width: 255px;
@@ -125,7 +129,7 @@ body {
   position: absolute;
   top: 0;
   right: -285px;
-}
+} */
 .keyboard__title {
   color: var(--color-blue);
   margin-bottom: 1.5rem;
@@ -142,13 +146,14 @@ body {
 
 .keyboard__intro {
   display: grid;
-  grid-template-columns: 1fr 255px;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-columns: 3fr 1fr;
   align-items: center;
   margin-bottom: 168px;
   gap: 125px;
   position: relative;
 }
-.keyboard__intro::after {
+/* .keyboard__intro::after {
   content: "";
   display: block;
   width: 255px;
@@ -157,13 +162,14 @@ body {
   position: absolute;
   bottom: 0;
   left: -280px;
-}
+} */
 .keyboard__images {
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr 5fr;
   gap: 30px;
   position: relative;
 }
-.keyboard__images::after {
+/* .keyboard__images::after {
   content: "";
   display: block;
   width: 255px;
@@ -172,18 +178,58 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   mix-blend-mode: multiply;
   border-radius: 20px;
-}
+} */
 .keyboard__phone,
 .keyboard__glass {
   height: 480px;
 }
-.keyboard__phone {
-  width: 255px;
-}
+
 .keyboard__title-bottom {
   margin-bottom: 27px;
 }
 
-@media (max-width: 1200px);
+@media (max-width: 900px) {
+  .keyboard__home {
+    position: relative;
+    grid-template-columns: 385px;
+  }
+  .keyboard__img {
+    position: absolute;
+    width: 478px;
+    top: 0;
+    right: -197px;
+    margin-left: 70px;
+  }
+  .keyboard__title {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 34px;
+  }
+  .btn-orange {
+    margin-right: 37px;
+  }
+
+  .keyboard__intro {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 320px 1fr;
+    align-items: center;
+    gap: 72px;
+    position: relative;
+  }
+  .keyboard__images {
+    grid-template-columns: 4fr 8fr;
+  }
+  .keyboard__phone,
+  .keyboard__glass {
+    height: 320px;
+  }
+  .keyboard__box {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 36px;
+  }
+}
