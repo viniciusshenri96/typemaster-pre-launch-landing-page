@@ -274,7 +274,7 @@ body {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .container {
     margin: 0 1.5rem;
   }
@@ -282,17 +282,48 @@ body {
     padding: 23px 0 64px;
   }
   .keyboard__home {
-    grid-template-columns: 330px;
+    grid-template-columns: auto;
     justify-items: start;
     gap: 64px;
+    margin-bottom: 24px;
   }
   .keyboard__img {
-    position: relative;
+    /* position: relative; */
     width: 372px;
     height: 331px;
   }
+
   .btn-orange {
     margin-right: 32px;
     padding: 11px 14px;
+  }
+  .keyboard__intro {
+    display: grid;
+    grid-template-columns: 327px;
+    grid-template-rows: auto 1fr;
+    align-items: center;
+    gap: 75px;
+    text-align: center;
+  }
+  .keyboard__images {
+    grid-template-columns: auto 220px;
+    gap: 24px;
+    position: relative;
+    left: -46px;
+  }
+  .keyboard__phone,
+  .keyboard__glass {
+    height: 193px;
+  }
+
+  .keyboard__phone {
+    width: 129px;
+  }
+  .keyboard__title-bottom {
+    margin-bottom: 0;
+  }
+  .keyboard__box {
+    grid-template-columns: auto;
+    gap: 24px;
   }
 }
