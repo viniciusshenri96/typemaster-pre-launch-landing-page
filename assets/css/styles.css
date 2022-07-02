@@ -7,7 +7,7 @@
   --color-orange: #f16718;
   --color-orange-hover: #ff9b62;
   --color-blue: #162542;
-  --color-blue-text: #7b8bad;
+  --color-blue-text: hsl(221, 23%, 58%);
   --color-grey: #e8eff2;
   --color-white: #ffffff;
 
@@ -34,7 +34,7 @@ img {
   display: block;
   border-radius: 20px;
   object-fit: cover;
-  object-position: left;
+  object-position: center;
 }
 
 a:link,
@@ -47,7 +47,8 @@ ul {
   list-style: none;
 }
 span {
-  font-weight: 700;
+  font-weight: 700 !important;
+  color: var(--color-blue-text);
 }
 body {
   background-color: var(--color-white);
@@ -120,7 +121,7 @@ body {
   position: relative;
   margin-bottom: 30px;
 }
-/* .keyboard__home::after {
+.keyboard__home::after {
   content: "";
   display: block;
   width: 255px;
@@ -129,7 +130,7 @@ body {
   position: absolute;
   top: 0;
   right: -285px;
-} */
+}
 .keyboard__title {
   color: var(--color-blue);
   margin-bottom: 1.5rem;
@@ -153,7 +154,7 @@ body {
   gap: 125px;
   position: relative;
 }
-/* .keyboard__intro::after {
+.keyboard__intro::after {
   content: "";
   display: block;
   width: 255px;
@@ -162,7 +163,7 @@ body {
   position: absolute;
   bottom: 0;
   left: -280px;
-} */
+}
 .keyboard__images {
   display: grid;
   grid-template-columns: 3fr 5fr;
@@ -187,26 +188,61 @@ body {
   height: 480px;
 }
 
+.phone-bg {
+  position: relative;
+}
+
+.phone-bg::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-orange);
+  mix-blend-mode: multiply;
+  border-radius: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
 .keyboard__title-bottom {
   margin-bottom: 27px;
+  color: var(--color-blue);
 }
 
 @media (max-width: 900px) {
+  .header {
+    padding: 40px 0 122px;
+  }
   .keyboard__home {
-    position: relative;
-    grid-template-columns: 385px;
+    /* grid-template-columns: 400px; */
+    grid-template-columns: 350px 1fr;
+    gap: 69px;
+    margin-bottom: 100px;
+    /* position: relative; */
+  }
+  .keyboard__home::after {
+    display: none;
+  }
+  .keyboard__text {
+    /* width: 350px; */
+    /* margin-right: 70px; */
   }
   .keyboard__img {
-    position: absolute;
+    position: relative;
     width: 478px;
+    height: 425px;
     top: 0;
-    right: -197px;
-    margin-left: 70px;
+    right: 0;
   }
   .keyboard__title {
     font-size: 3rem;
     line-height: 1;
     margin-bottom: 34px;
+  }
+  .keyboard__desc {
+    font-size: 1rem;
   }
   .btn-orange {
     margin-right: 37px;
@@ -221,15 +257,42 @@ body {
     position: relative;
   }
   .keyboard__images {
-    grid-template-columns: 4fr 8fr;
+    grid-template-columns: 1fr 2fr;
   }
   .keyboard__phone,
   .keyboard__glass {
     height: 320px;
   }
+  .keyboard__phone {
+    background-position: center;
+  }
   .keyboard__box {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 255px 1fr;
+    align-items: center;
     gap: 36px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    margin: 0 1.5rem;
+  }
+  .header {
+    padding: 23px 0 64px;
+  }
+  .keyboard__home {
+    grid-template-columns: 330px;
+    justify-items: start;
+    gap: 64px;
+  }
+  .keyboard__img {
+    position: relative;
+    width: 372px;
+    height: 331px;
+  }
+  .btn-orange {
+    margin-right: 32px;
+    padding: 11px 14px;
   }
 }

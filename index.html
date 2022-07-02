@@ -22,7 +22,7 @@
   <main>
     <section class="keyboard container">
       <div class="keyboard__home">
-        <div>
+        <div class="keyboard__text">
           <h1 class="keyboard__title font-h1 uppercase">Typemaster keyboard</h1>
           <p class="keyboard__desc font-body ">Improve your productivity and gaming without breaking the bank. Upgrade to a high quality
             mechanical typing experience.</p>
@@ -30,14 +30,26 @@
           </a>
           <span class="font-body uppercase">Release on 5/27</span>
         </div>
-        <img class="keyboard__img" src="./assets/img/desktop/image-keyboard.jpg" alt="">
+        <picture class="keyboard__img">
+          <source media="(max-width: 700px)" srcset="./assets/img/mobile/image-keyboard.jpg">
+          <source media="(max-width: 900px)" srcset="./assets/img/tablet/image-keyboard.jpg">
+          <img class="keyboard__img" src="./assets/img/desktop/image-keyboard.jpg" alt="">
+        </picture>
       </div>
 
 
       <div class="keyboard__intro">
         <div class="keyboard__images">
-          <img class="keyboard__phone" src="./assets/img/desktop/image-phone-and-keyboard.jpg" alt="">
-          <img class="keyboard__glass" src="./assets/img/desktop/image-glass-and-keyboard.jpg" alt="">
+          <picture>
+            <source media="(max-width: 900px)" srcset="./assets/img/tablet/image-phone-and-keyboard.jpg">
+            <div class="phone-bg">
+              <img class="keyboard__phone" src="./assets/img/desktop/image-phone-and-keyboard.jpg" alt="">
+            </div>
+          </picture>
+          <picture>
+            <source media="(max-width: 900px)" srcset="./assets/img/tablet/image-glass-and-keyboard.jpg">
+            <img class="keyboard__glass" src="./assets/img/desktop/image-glass-and-keyboard.jpg" alt="">
+          </picture>
         </div>
         <div class="keyboard__box">
           <h2 class="keyboard__title-bottom font-h2 uppercase">mechanical wireless
