@@ -7,7 +7,7 @@
   --color-orange: #f16718;
   --color-orange-hover: #ff9b62;
   --color-blue: #162542;
-  --color-blue-text: hsl(221, 23%, 58%);
+  --color-blue-text: #7b8bad;
   --color-grey: #e8eff2;
   --color-white: #ffffff;
 
@@ -30,41 +30,33 @@
 
 h1,
 h2,
-h3 {
+h3,
+a:link {
   color: var(--color-blue);
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border-radius: 20px;
-  object-fit: cover;
-  object-position: right;
+  text-transform: uppercase;
 }
 
 a:link,
 a:visited {
   text-decoration: none;
-  color: #ffffff;
+}
+
+span {
+  text-transform: uppercase;
 }
 
 ul {
   list-style: none;
 }
-span {
-  font-weight: 700 !important;
-  color: var(--color-blue-text);
-}
+
 body {
   background-color: var(--color-white);
   color: var(--color-blue-text);
   font-family: sans-serif;
-  position: relative;
   overflow-x: hidden;
 }
 
-/* Typograpya */
+/* Typographya */
 .font-h1 {
   font: var(--fw-black) var(--font-h1) / 1 "Barlow";
 }
@@ -77,22 +69,24 @@ body {
 .font-body {
   font: var(--fw-medium) var(--font-body) / 1.62 "Barlow";
 }
-.uppercase {
-  text-transform: uppercase;
-}
 
 /* Buttons */
 .btn {
   display: inline-block;
   padding: 1rem 1.625rem;
-  color: var(--color-white);
   border-radius: 8px;
+  font-weight: 700;
+}
+
+/* Layout */
+.grid {
+  display: grid;
+  gap: 125px;
 }
 
 .container {
   max-width: 1110px;
   margin: 0 2.5rem;
-  margin-bottom: 40px;
 }
 
 @media (min-width: 1160px) {
@@ -109,126 +103,119 @@ body {
   padding: 55px 0 83px;
 }
 
-.header__img {
-  border-radius: 0;
-  width: auto;
+.btn.btn-blue,
+.btn.btn-blue {
+  background-color: var(--color-grey);
+  color: var(--color-blue);
 }
 
-.btn-blue {
-  background-color: var(--color-blue-text);
+.btn-blue:hover,
+.btn-blue:active {
+  background-color: var(--color-blue);
+  color: var(--color-white);
 }
 
 /* MAIN */
 .keyboard__home {
-  display: grid;
-  /* grid-template-columns: 1.6fr 2fr; */
-  grid-template-columns: 5fr 7fr;
-  gap: 125px;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  position: relative;
   margin-bottom: 30px;
+  position: relative;
 }
-.keyboard__home::after {
-  content: "";
-  display: block;
-  width: 255px;
-  height: 240px;
-  background: url(../img/shared/pattern-square.svg) no-repeat;
-  position: absolute;
-  top: 0;
-  right: -285px;
-}
+
 .keyboard__title {
-  color: var(--color-blue);
   margin-bottom: 1.5rem;
 }
+
 .keyboard__desc {
   font-size: 1.125rem;
   line-height: 1.44;
   margin-bottom: 2.5rem;
 }
+
+.btn-box {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  white-space: nowrap;
+}
+
 .btn-orange {
   background-color: var(--color-orange);
-  margin-right: 40px;
+  color: var(--color-white);
+}
+
+.btn-orange:hover,
+.btn-orange:active {
+  background-color: var(--color-orange-hover);
+}
+
+.keyboard__bg {
+  width: 540px;
+  height: 480px;
+  background: url(../img/desktop/image-keyboard.jpg);
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.keyboard__details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(calc(100% - (-1.875rem)));
 }
 
 .keyboard__intro {
-  display: grid;
-  /* grid-template-columns: 1fr 1fr; */
   grid-template-columns: 3fr 1fr;
   align-items: center;
-  margin-bottom: 168px;
-  gap: 125px;
   position: relative;
+  margin-bottom: 168px;
 }
-.keyboard__intro::after {
-  content: "";
-  display: block;
-  width: 255px;
-  height: 240px;
-  background: url(../img/shared/pattern-square.svg) no-repeat;
-  position: absolute;
-  bottom: 0;
-  left: -280px;
-}
+
 .keyboard__images {
   display: grid;
   grid-template-columns: 3fr 5fr;
   gap: 30px;
   position: relative;
 }
-/* .keyboard__images::after {
-  content: "";
-  display: block;
-  width: 255px;
+
+.keyboard__phone {
+  max-width: 255px;
   height: 480px;
-  background: var(--color-orange);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  mix-blend-mode: multiply;
   border-radius: 20px;
-} */
-.keyboard__phone,
+  background-blend-mode: multiply;
+  background: url(../img/desktop/image-phone-and-keyboard.jpg),
+    linear-gradient(#f16718, #f16718);
+  background-size: cover;
+}
+
 .keyboard__glass {
+  max-width: 445px;
   height: 480px;
-}
-
-.phone-bg {
-  position: relative;
-}
-
-.phone-bg::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-orange);
-  mix-blend-mode: multiply;
   border-radius: 20px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
+  background-image: url(../img/desktop/image-glass-and-keyboard.jpg);
+  background-size: cover;
 }
 
 .keyboard__title-bottom {
   margin-bottom: 27px;
-  color: var(--color-blue);
+}
+
+.keyboard__details-rigth {
+  position: absolute;
+  bottom: 0;
+  transform: translate(calc(-100% - 1.875rem));
 }
 
 .feactures {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); */
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
   align-items: start;
   justify-items: center;
-  column-gap: 30px;
-  row-gap: 72px;
+  gap: 72px 30px;
   margin-bottom: 128px;
 }
-.feactures__icon {
+.feactures__box {
   width: 65px;
   height: 65px;
   display: flex;
@@ -236,7 +223,6 @@ body {
   align-items: center;
   background-color: var(--color-orange);
   border-radius: 16px;
-  /* padding: 20px; */
   margin-bottom: 48px;
 }
 .feactures__title {
@@ -244,80 +230,92 @@ body {
   max-width: 200px;
 }
 .feactures__desc {
-  width: 255px;
+  max-width: 255px;
 }
+
 .copy {
   text-align: center;
+  margin-bottom: 40px;
 }
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
-  .keyboard__home {
-    /* grid-template-columns: 400px; */
-    /* grid-template-columns: 360px 1fr; */
-    gap: 70px;
-    /* position: relative; */
+  .keyboard__bg {
+    width: 478px;
+    height: 425px;
+    background-image: url(../img/tablet/image-keyboard.jpg);
+  }
+  .keyboard__details {
+    display: none;
+  }
+  .keyboard__home::after,
+  .keyboard__intro::before {
+    display: none;
+  }
+  .keyboard__home,
+  .keyboard__intro {
+    gap: 69px;
+  }
+  .btn-box {
+    gap: 37px;
   }
 }
 
 @media (max-width: 900px) {
-  .container {
-    margin-bottom: 43px;
-  }
   .header {
-    padding: 40px 0 122px;
+    padding: 40px 0 62px;
   }
+
   .keyboard__home {
-    /* grid-template-columns: 400px; */
-    grid-template-columns: 360px 1fr;
-    margin-bottom: 100px;
-    /* position: relative; */
-  }
-  .keyboard__home::after {
-    display: none;
-  }
-  .keyboard__text {
-    /* width: 350px; */
-    /* margin-right: 70px; */
-  }
-  .keyboard__img {
-    position: relative;
-    width: 478px;
-    height: 425px;
-    top: 0;
-    right: 0;
-  }
-  .keyboard__title {
-    font-size: 3rem;
-    line-height: 1;
-    margin-bottom: 34px;
-  }
-  .keyboard__desc {
-    font-size: 1rem;
-  }
-  .btn-orange {
-    margin-right: 37px;
+    grid-template-columns: 339px 1fr;
+    margin-bottom: 40px;
   }
 
   .keyboard__intro {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 320px 1fr;
+    margin-bottom: 142px;
+  }
+
+  .keyboard__phone {
+    width: 214px;
+    height: 320px;
+    background: url(../img/tablet/image-phone-and-keyboard.jpg),
+      linear-gradient(#f16718, #f16718);
+    background-size: cover;
+  }
+
+  .keyboard__glass {
+    max-width: 100%;
+    height: 320px;
+    background-image: url(../img/tablet/image-glass-and-keyboard.jpg);
+  }
+
+  .keyboard__img {
+    width: 478px;
+    height: 425px;
+  }
+
+  .keyboard__title {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 37px;
+  }
+  .keyboard__desc {
+    font-size: 1rem;
+    margin-bottom: 37px;
+  }
+
+  .keyboard__intro {
+    grid-template-columns: auto;
     align-items: center;
     gap: 72px;
     position: relative;
     margin-bottom: 142px;
   }
+
   .keyboard__images {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 214px 1fr;
   }
-  .keyboard__phone,
-  .keyboard__glass {
-    height: 320px;
-  }
-  .keyboard__phone {
-    background-position: center;
-  }
+
   .keyboard__box {
     display: grid;
     grid-template-columns: 255px 1fr;
@@ -325,8 +323,22 @@ body {
     gap: 36px;
   }
 
+  .keyboard__title-bottom {
+    margin-bottom: 0;
+  }
+
+  .feactures {
+    justify-items: start;
+    margin-bottom: 142px;
+    gap: 72px 0;
+  }
+
   .feactures__icon {
     margin-bottom: 40px;
+  }
+
+  .feactures__desc {
+    max-width: 290px;
   }
 }
 
@@ -347,41 +359,51 @@ body {
   }
   .keyboard__text {
     text-align: center;
-    gap: 32px;
+    margin-right: 0;
   }
   .keyboard__title,
   .keyboard__desc {
     margin-bottom: 32px;
   }
-  .keyboard__img {
-    position: relative;
-    width: 100%;
-    height: 331px;
+
+  .btn-box {
+    gap: 32px;
   }
+
   .btn-orange {
-    margin-right: 32px;
     padding: 11px 14px;
   }
+
+  .keyboard__bg {
+    width: 100%;
+    background-image: url(../img/mobile/image-keyboard.jpg);
+  }
+
   .keyboard__intro {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
     justify-content: center;
     gap: 63px;
   }
+
   .keyboard__images {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 130px 1fr;
     gap: 24px;
-    /* position: relative;
-    left: -46px; */
-  }
-  .keyboard__phone,
-  .keyboard__glass {
-    height: 193px;
   }
 
   .keyboard__phone {
     width: 100%;
+    height: 193px;
+    background: url(../img/mobile/image-phone-and-keyboard.jpg),
+      linear-gradient(#f16718, #f16718);
+    background-size: cover;
   }
+
+  .keyboard__glass {
+    width: 100%;
+    height: 193px;
+    background-image: url(../img/mobile/image-glass-and-keyboard.jpg);
+  }
+
   .keyboard__title-bottom {
     margin-bottom: 0;
   }
@@ -392,11 +414,19 @@ body {
   }
   .feactures {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
 
   .feactures__item {
     text-align: center;
+    display: grid;
+    justify-items: center;
   }
+
+  .feactures__box {
+    text-align: center;
+  }
+
   .feactures__title {
     text-align: center;
     width: 200px;
@@ -407,20 +437,24 @@ body {
     margin: auto;
     margin-bottom: 48px;
   }
+  .copy {
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 400px) {
-  .container {
-    margin-bottom: 50px;
-  }
   .keyboard__text {
     text-align: left;
   }
 
-  .keyboard__img {
-    position: relative;
+  .keyboard__bg {
     width: 372px;
     height: 331px;
+    background-image: url(../img/mobile/image-keyboard.jpg);
+  }
+
+  .keyboard__intro {
+    margin-bottom: 111px;
   }
 
   .keyboard__images {
@@ -433,8 +467,17 @@ body {
 
   .keyboard__phone {
     width: 129px;
+    height: 193px;
+    background: url(../img/mobile/image-phone-and-keyboard.jpg),
+      linear-gradient(#f16718, #f16718);
+    background-size: cover;
   }
 
+  .keyboard__glass {
+    width: 220px;
+    height: 193px;
+    background-image: url(../img/mobile/image-glass-and-keyboard.jpg);
+  }
   .keyboard__box {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -447,5 +490,88 @@ body {
 
   .keyboard__desc-size {
     max-width: 327px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    margin: 0 1rem;
+  }
+
+  .keyboard__home {
+    grid-template-columns: 1fr;
+    gap: 44px;
+    margin-bottom: 36px;
+  }
+  .keyboard__text {
+    text-align: left;
+    margin-right: 0;
+  }
+
+  .keyboard__title {
+    font-size: 36px;
+  }
+
+  .keyboard__desc {
+    font-size: 14px;
+    max-width: 200px;
+  }
+
+  .btn-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .btn-orange {
+    padding: 11px 14px;
+  }
+
+  .keyboard__bg {
+    width: 272px;
+    height: 231px;
+    background-image: url(../img/mobile/image-keyboard.jpg);
+    background-position: center;
+  }
+
+  .keyboard__intro {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 63px;
+  }
+
+  .keyboard__images {
+    grid-template-columns: 130px 1fr;
+    gap: 24px;
+    position: relative;
+    left: -32px;
+  }
+
+  .keyboard__phone {
+    width: 100%;
+    height: 193px;
+    background: url(../img/mobile/image-phone-and-keyboard.jpg),
+      linear-gradient(#f16718, #f16718);
+    background-size: cover;
+  }
+
+  .keyboard__glass {
+    width: 158px;
+    height: 193px;
+    background-image: url(../img/mobile/image-glass-and-keyboard.jpg);
+  }
+
+  .keyboard__title-bottom {
+    margin-bottom: 0;
+  }
+
+  .keyboard__desc-size {
+    font-size: 14px;
+    max-width: 220px;
+  }
+
+  .keyboard__box {
+    grid-template-columns: auto;
+    gap: 24px;
+    text-align: center;
   }
 }
