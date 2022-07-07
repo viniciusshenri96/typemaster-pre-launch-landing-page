@@ -198,6 +198,7 @@ As seguintes ferramentas e tecnologias foram usadas na construção do projeto:
 <!-- - **CSS GRID** -->
 <img alt="" title="" src="./readme/grid.svg"/>
 <!-- - **METODOLOGIA BEM** -->
+<img alt="" title="" src="./readme/bem.svg"/>
 <!-- - **MEDIA QUERIES** -->
 <img alt="" title="" src="./readme/media.svg"/>
 <!-- - **FIGMA** -->
