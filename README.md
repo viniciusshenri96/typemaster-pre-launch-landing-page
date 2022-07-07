@@ -57,9 +57,7 @@
 
 &nbsp;
 
-<h3 align="left" style="color: hsl(78,65%,55%); border: 1px solid rgba(170, 215, 66, 0.15); padding:0.5rem; width:200px" > 
-    Nível do projeto: JUNIOR <br> 
-</h3>
+<img alt="" title="" src="./readme/nivel.svg"/>
 
 ---
 
@@ -191,15 +189,19 @@ $ npm run start
 
 As seguintes ferramentas e tecnologias foram usadas na construção do projeto:
 
-#### **Website** (HTML + CSS)
-
-- **HTML**
-- **CSS**
-- **FLEXBOX**
-- **CSS GRID**
-- **METODOLOGIA BEM**
-- **MEDIA QUERIES**
-- **FIGMA**
+<!-- - **HTML** -->
+<img alt="" title="" src="./readme/html.svg"/>
+<!-- - **CSS** -->
+<img alt="" title="" src="./readme/css.svg"/>
+<!-- - **FLEXBOX** -->
+<img alt="" title="" src="./readme/flexbox.svg"/>
+<!-- - **CSS GRID** -->
+<img alt="" title="" src="./readme/grid.svg"/>
+<!-- - **METODOLOGIA BEM** -->
+<!-- - **MEDIA QUERIES** -->
+<img alt="" title="" src="./readme/media.svg"/>
+<!-- - **FIGMA** -->
+<img alt="" title="" src="./readme/figma.svg"/>
 
 <!-- - **[Leaflet](https://react-leaflet.js.org/en/)**
 - **[React Leaflet](https://react-leaflet.js.org/)**
