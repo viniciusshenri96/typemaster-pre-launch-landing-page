@@ -107,6 +107,8 @@
 
   <img alt="Typemaster pre-launch landing page" title="" src="./readme/desktop2.png">
 
+   <img alt="Typemaster pre-launch landing page" title="" src="./readme/desktop3.png">
+
   <!-- <img alt="NextLevelWeek" title="#NextLevelWeek" src="./assets/sucesso-web.svg" width="400px"> -->
 </p>
 
