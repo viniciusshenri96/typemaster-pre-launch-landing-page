@@ -252,8 +252,8 @@ body {
 
 /* FOOTER */
 .copy {
-  margin-left: 568px;
-  margin-right: 600px;
+  display: flex;
+  justify-content: center;
   margin-bottom: 2.5rem;
   white-space: nowrap;
 }
