@@ -219,11 +219,6 @@ body {
 }
 
 /* FEACTURES */
-
-.section {
-  display: grid;
-}
-
 .feactures {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15.938rem, 1fr));
@@ -255,7 +250,6 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 2.5rem;
-  white-space: nowrap;
 }
 
 /* RESPONSIVE */
