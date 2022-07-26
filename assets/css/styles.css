@@ -99,7 +99,7 @@ body {
   margin: 0 2.5rem;
 }
 
-@media (min-width: 72.5rem) {
+@media (min-width: 73em) {
   .container {
     margin: 0 auto;
   }
@@ -257,7 +257,7 @@ body {
 }
 
 /* RESPONSIVE */
-@media (max-width: 66rem) {
+@media (max-width: 66em) {
   .keyboard__home,
   .keyboard__intro {
     gap: 4.313rem;
@@ -285,7 +285,7 @@ body {
   }
 }
 
-@media (max-width: 56.25rem) {
+@media (max-width: 56em) {
   .header {
     padding: 2.5rem 0 3.875rem;
   }
@@ -368,7 +368,7 @@ body {
   }
 }
 
-@media (max-width: 38.75rem) {
+@media (max-width: 39em) {
   .container {
     margin: 0 1.5rem;
   }
@@ -473,7 +473,7 @@ body {
   }
 }
 
-@media (max-width: 25rem) {
+@media (max-width: 25em) {
   .keyboard__text {
     text-align: left;
   }
@@ -524,7 +524,7 @@ body {
   }
 }
 
-@media (max-width: 20rem) {
+@media (max-width: 20em) {
   .container {
     margin: 0 1rem;
   }
